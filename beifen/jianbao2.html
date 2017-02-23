@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jianbaocharts1.css">
+
+	<script src="jquery-3.1.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="highcharts.js"></script>
+	<script type="text/javascript" src="exporting.js"></script>
+	<script type="text/javascript" src="js/CPRS.js"></script>
+
+	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+   <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+   <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+   <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+   <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+   <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+</head>
+
+<body>
+<div id="container">
+	<div id="header"></div>
+	<div id="content">
+		<div id="content-left">
+			<a href="jianbao1.html"><img src="images/moban1.jpg" alt="" id="xiaomoban1"></a>
+			<img src="images/moban2.jpg" alt="" id="xiaomoban2" style="border: 2px inset #282828">
+			<a href="jianbao3.html"><img src="images/moban3.jpg" alt="" id="xiaomoban3"></a>
+		</div>
+		<div id="content-main">
+			<div id="jianbaos">
+				<img src="images/moban2.jpg" id="chart2">
+		      		<img src="" alt="" id="jianbao7">
+		      		<img src="" alt="" id="jianbao8">
+		      		<img src="" alt="" id="jianbao9">
+		      		<img src="" alt="" id="jianbao10">
+		      		<img src="" alt="" id="jianbao11">
+		      		<img src="" alt="" id="jianbao12">
+			</div>
+		</div>
+
+		<div class="clear"></div>
+
+		<div id="finalJianbao2">
+
+</div>
+
+		<button type="button" class="btn btn-primary btn-lg" id="mobanPic2">生成简报图</button>
+
+	</div>
+
+</div>
+<script type="text/javascript">
+	$(function(){
+		var storage = window.localStorage;
+		for(var i=7;i<=12;i++){
+			var exp = storage.getItem('cvs'+i);
+			console.log(exp);
+			$("#jianbao"+i).attr("src",exp);
+		}
+
+		$("#mobanPic2").click(function(){
+		        html2canvas($("#jianbaos"), {
+		        onrendered: function(canvas) {
+		            console.log(canvas);
+		                var imgUrl = canvas.toDataURL("image/png").replace("image/png","image/octet-stream");
+		                //$("#add").attr("src",imgUrl);
+		                //下载图片
+		                  var saveFile = function (data, filename) {  
+		                var save_link = document.createElementNS('http://www.w3.org/1999/xhtml', 'a');  
+		                save_link.href = data;  
+		                save_link.download = filename;  
+		          
+		                var event = document.createEvent('MouseEvents');  
+		                event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);  
+		                save_link.dispatchEvent(event);  
+		            };  
+		            // 下载后的图片名 
+		            var type = 'png'; 
+		            var filename = 'baidufe_' + (new Date()).getTime() + '.' + type;  
+		            // download  
+		            saveFile(imgUrl, filename);
+		        },
+		        width: 1000,
+		        height: 1000
+		    });
+
+		});
+
+	})
+</script>
+
+<script type="text/javascript" src="js/jianbao2.js"></script>
+<script type="text/javascript" src="js/func.js"></script>
+<script type="text/javascript" src="js/html2canvas.js"></script>
+<script>
+
+
+</script>
+</body>
+</html>

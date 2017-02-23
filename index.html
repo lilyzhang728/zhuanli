@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/buju.css">
+
+	<script src="jquery-3.1.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+   <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+   <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+   <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+   <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+   <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+   <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+	
+   <script type="text/javascript" src="js/CPRS.js"></script>
+</head>
+
+<body>
+<div id="container">
+	<div id="header">
+		<input type="file">
+		<button type="button" class="btn btn-success">载入数据</button>
+	</div>
+	<div id="content">
+		<div id="content-left">
+
+
+
+			<ul class="nav nav-pills nav-stacked" id="myNav"> 
+                <li class="active"><a href="javascript:;" id="Tab1">组图</a></li>
+				<li><a href="javascript:;" id="Tab2" class="inactive">动图</a>
+<!-- 					<ul class="list" style="display: none" id="dongall">
+	<li class="last"><a href="#" id="dong1">申请人动图</a></li>
+	<li class="last"><a href="#" id="dong2">世界热力图</a></li>
+</ul> -->
+				</li>
+                <li><a href="javascript:;" id="Tab3" class="inactive">简报图</a>
+               		<ul class="list" style="display: none" id="jianbaoid">
+						<li class="last"><a href="#" id="jianbaoid1">模板一</a></li>
+						<li class="last"><a href="#" id="jianbaoid2">模板二</a></li>
+						<li class="last"><a href="#" id="jianbaoid3">模板三</a></li>
+					
+					</ul>
+                </li> 
+                <li><a href="javascript:;" id="Tab4">大数据图</a></li> 
+            </ul>
+		</div>
+
+
+
+
+
+
+
+
+		
+		<div id="content-main">
+			<!-- 右侧组图标签页 -->
+			<div class="" id="myTab1" style="display: block;">							
+				<ul class="nav nav-tabs" role="tablist">
+		 			<li class="active" id="biaozhun"><!-- <a href="#standard" data-toggle="tab">标准图</a> --></li>
+				    <!-- <li><a href="#made" data-toggle="tab">定制图</a></li> -->
+				</ul>
+
+				<div id="myTabContent" class="tab-content">
+				    <div class="tab-pane fade in active" id="standard">
+				        <div id="container1"></div>
+				        <div id="container2"></div>
+				        <div id="container3"></div>
+				        <div id="container4"></div>
+				        <div id="container5"></div>
+				        <div id="container6"></div>
+				        <canvas id="canvas1" style="display: none;"></canvas>
+				        <canvas id="canvas2" style="display: none;"></canvas>
+				        <canvas id="canvas3" style="display: none;"></canvas>
+				        <canvas id="canvas4" style="display: none;"></canvas>
+				        <canvas id="canvas5" style="display: none;"></canvas>
+				        <canvas id="canvas6" style="display: none;"></canvas>
+				    </div>
+
+				</div>
+
+				<form action="#">
+					<input type="checkbox" id="check1" name="test">
+			        <input type="checkbox" id="check2" name="test">
+			        <input type="checkbox" id="check3" name="test">
+			        <input type="checkbox" id="check4" name="test">
+			        <input type="checkbox" id="check5" name="test">
+			        <input type="checkbox" id="check6" name="test">
+<!-- 					<select onchange="javascript:window.open(this.options[this.selectedIndex].value)" id="button">
+	<option value="../../zhuanli2/test/index.html" style="background:#000099;">
+		one
+	</option>
+	<option value="../../zhuanli2/test/index.html" style="background:#CC0000;">
+		two
+	</option>
+	<option value="../../zhuanli2/test/index.html" style="background:#008cd6;">
+		three
+	</option>
+</select> -->
+					<div id="hecheng">
+						<button type="button" class="btn btn-primary" formtarget="_blank" id="btnMix">合成</button>
+						<!-- <button type="button" class="btn btn-primary" formtarget="_blank" id="save" >截图</button> -->
+					</div>
+				</form>
+
+
+			</div>
+
+
+			<!-- 右侧动图 -->
+			<div class="" id="myTab2" style="display: none;">
+				<div id="mydong1"><img src="images/ap_dynamicnew.gif" alt="" style="width:850px;height:600px"></div>
+				<div id="mydong2"><img src="images/world_dynamicnew.gif" alt="" style="width:850px;height:600px"></div>
+			</div>
+
+			<!-- 右侧简报图 -->
+			<div class="" id="myTab3" style="display: none;">
+				<div id="hiddencharts">
+					<div id="group1">
+						<div id="jian1"></div>
+						<div id="jian2"></div>
+						<div id="jian3"></div>
+						<div id="jian4"></div>
+						<div id="jian5"></div>
+						<div id="jian6"></div>
+					</div>
+					<div id="group2">
+						<div id="jian7"></div>
+						<div id="jian8"></div>
+						<div id="jian9"></div>
+						<div id="jian10"></div>
+						<div id="jian11"></div>
+						<div id="jian12"></div>
+					</div>
+					<div id="group3">
+					    <div id="jian13"></div>
+						<div id="jian14"></div>
+						<div id="jian15"></div>
+						<div id="jian16"></div>
+						<div id="jian17"></div>
+						<div id="jian18"></div>
+					</div>
+				</div>
+			</div>
+			
+	
+
+				<!--<img src="images/chartthree.jpg" alt="" id="chartthree" onclick="">-->
+			</div>
+
+
+			<!-- 右侧大数据图 -->
+			<div class="" id="myTab4" style="display: none;">
+				<img src="images/AS_REFERENCE_BUBBLE.png" alt="" class="bigdata" style="display: block;margin: 0 auto;">
+				<img src="images/REFERENCE_BUBBLE.png" alt="" class="bigdata" style="display: block;margin: 0 0 0 260px;">
+			</div>
+		</div>
+	</div>
+	<div class="clear"></div>
+	<div id="footer"></div>
+</div>
+
+
+<script type="text/javascript" src="js/charts.js"></script>
+<script type="text/javascript" src="js/jianbao1.js"></script>
+<script type="text/javascript" src="js/jianbao2.js"></script>
+<script type="text/javascript" src="js/jianbao3.js"></script>
+<script type="text/javascript" src="js/func.js"></script>
+<script type="text/javascript" src="js/html2canvas.js"></script>
+
+</body>
+</html>

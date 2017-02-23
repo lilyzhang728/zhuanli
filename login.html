@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link href="css/login2.css" rel="stylesheet" type="text/css" />
+ <style type="text/css">
+ #gg{margin:0 0 0 20px;}
+.con{width:1000px;margin:0 auto;border:0px solid #ccc;padding:40px 0  10px 0;}
+.con:after{clear:both;display:block;width:0;height:0;content:""}
+.pic{width:100px;height:100px;float:left;border:0px solid #ccc}
+.pic img{width:250px;height:100px;}
+.cent{float:left;width:700px;border:1px;margin-left:200px;margin-top:-10px}
+h1{font-size:50px;}
+</style>
+</style>
+<script type="text/javascript">
+	  function login(){
+	    var AdminName=document.loginform.username.value;
+	    var AdminPassword=document.loginform.password.value;
+	    if(AdminName=="专利可视化"&&AdminPassword=="123456"){
+	document.loginform.submit();
+	return true;
+	}else{
+	alert("登录失败！请确认账号与密码正确！");
+	return false;
+	}
+	    }
+	  
+</script>
+</head>
+
+<div class="con">
+
+   <div class="pic"><img src="images/logo.png" id="gg"></div>
+  <div class="cent"><h1>专利分析可视化系统</h1></div>
+</div>
+<body>
+<div class="login" style="margin-top:50px;">
+    
+    
+        <div><h2 style="text-align:center">登录</h2>
+		
+        </div>
+    
+  <hr>
+    
+    <div class="web_qr_login" id="web_qr_login" style="display: block; height: 235px;">    
+
+            <!--登录-->
+            <div class="web_login" id="web_login">
+               
+               
+               <div class="login-box">
+    
+            
+			<div class="login_form">
+				<form action="index.html"  name="loginform" onSubmit="return login(); id="login_form" class="loginForm" >
+				<input type="hidden" name="did" value="0"/>
+               <input type="hidden" name="to" value="log"/>
+                <div class="uinArea" id="uinArea">
+                <label class="input-tips" for="u">帐号：</label>
+                <div class="inputOuter" id="uArea">
+                    
+                    <input type="text" id="u" name="username" class="inputstyle"/>
+                </div>
+                </div>
+                <div class="pwdArea" id="pwdArea">
+               <label class="input-tips" for="p">密码：</label> 
+               <div class="inputOuter" id="pArea">
+                    
+                    <input type="password" id="p" name="password" class="inputstyle"/>
+                </div>
+                </div>
+               
+                <div style="padding-left:50px;margin-top:20px;"><input type="submit" value="登 录" style="width:150px;" class="button_blue"/></div>
+              </form>
+           </div>
+           
+            	</div>
+               
+            </div>
+            <!--登录end-->
+  </div>
+
+</div>
+<br>
+<br>
+<br><br>
+<br><br>
+ 
+
+
+</body>
+</html>

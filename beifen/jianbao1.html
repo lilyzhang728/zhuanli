@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/jianbaocharts1.css">
+
+
+	<script src="jquery-3.1.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+	<script type="text/javascript" src="highcharts.js"></script>
+	<script type="text/javascript" src="exporting.js"></script>
+	<script type="text/javascript" src="js/CPRS.js"></script>
+
+	<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+   <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+   <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+   <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+   <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+   <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+   <script type="text/javascript">
+   $(function(){
+   	var myChart = echarts.init(document.getElementById('main'));
+   	option = {
+    title : {
+        text: '某站点用户访问来源',
+        subtext: '纯属虚构',
+        x:'center'
+    },
+    tooltip : {
+        trigger: 'item',
+        formatter: "{a} <br/>{b} : {c} ({d}%)"
+    },
+    legend: {
+        orient: 'vertical',
+        left: 'left',
+        data: ['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+    },
+    series : [
+        {
+            name: '访问来源',
+            type: 'pie',
+            radius : '55%',
+            center: ['50%', '60%'],
+            data:[
+                {value:335, name:'直接访问'},
+                {value:310, name:'邮件营销'},
+                {value:234, name:'联盟广告'},
+                {value:135, name:'视频广告'},
+                {value:1548, name:'搜索引擎'}
+            ],
+            itemStyle: {
+                emphasis: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+myChart.setOption(option);
+
+   })
+   	
+
+   </script>
+
+</head>
+
+<body>
+<div id="container">
+	<div id="header"></div>
+	<div id="content">
+		<div id="content-left">
+			<img src="images/moban1.jpg" alt="" id="xiaomoban1" style="border: 2px inset #282828">
+			<a href="jianbao2.html"><img src="images/moban2.jpg" alt="" id="xiaomoban2"></a>
+			<a href="jianbao3.html"><img src="images/moban3.jpg" alt="" id="xiaomoban3"></a>
+		</div>
+		<div id="content-main">
+			<div id="jianbaos">
+				<img src="images/moban1.jpg" id="chart1">
+		      		<img src="" alt="" id="jianbao1">
+		      		<img src="" alt="" id="jianbao2">
+		      		<img src="" alt="" id="jianbao3">
+		      		<img src="" alt="" id="jianbao4">
+		      		<img src="" alt="" id="jianbao5">
+		      		<img src="" alt="" id="jianbao6">
+			</div>
+		</div>
+ <div id="main" style="width: 600px;height:400px;"></div>
+		<div class="clear"></div>
+
+		<div id="finalJianbao2">
+
+</div>
+
+		<button type="button" class="btn btn-primary btn-lg" id="mobanPic1">生成简报图</button>
+
+	</div>
+
+</div>
+<script type="text/javascript">
+	$(function(){
+		var storage = window.localStorage;
+		for(var i=1;i<=6;i++){
+			var exp = storage.getItem('cvs'+i);
+			console.log(exp);
+			$("#jianbao"+i).attr("src",exp);
+		}
+
+
+				
+		//生成最后简报图
+		$("#mobanPic1").click(function(){
+		      html2canvas($("#jianbaos"), {
+		        onrendered: function(canvas) {
+		            console.log(canvas);
+		                var imgUrl = canvas.toDataURL("image/png").replace("image/png","image/octet-stream");
+		                //$("#add").attr("src",imgUrl);
+		                //下载图片
+		                  var saveFile = function (data, filename) {  
+		                var save_link = document.createElementNS('http://www.w3.org/1999/xhtml', 'a');  
+		                save_link.href = data;  
+		                save_link.download = filename;  
+		          
+		                var event = document.createEvent('MouseEvents');  
+		                event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);  
+		                save_link.dispatchEvent(event);  
+		            };  
+		            // 下载后的图片名 
+		            var type = 'png'; 
+		            var filename = 'baidufe_' + (new Date()).getTime() + '.' + type;  
+		            // download  
+		            saveFile(imgUrl, filename);
+		        },
+		        width: 1000,
+		        height: 1000
+		    });
+		})
+
+	})
+</script>
+
+
+
+<script type="text/javascript" src="js/jianbao1.js"></script>
+<script type="text/javascript" src="js/func.js"></script>
+<script type="text/javascript" src="js/html2canvas.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+#container{
+	width: 980px;
+	height: 1000px;
+	margin: 0 auto;
+}
+#content{
+	height: 950px;
+	width: 980px;
+	margin: 0 auto;
+	margin-top: 20px;
+	background-color: #f9d672;
+	position: relative;
+}
+#content-left{
+	width: 200px;
+	margin: 10px;
+	display: inline;
+	float: left;
+	background-color: #e5eecc;
+	box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
+}
+#xiaomoban1,#xiaomoban2,#xiaomoban3{
+	width: 180px;
+	display: block;
+	margin:10px;
+	border: 1px solid #272822;
+}
+#content-main{
+	width: 720px;
+	height: 900px;
+	margin: 10px;
+	display: inline;
+	float: left;
+	background-color: #e5eecc;
+	box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
+}
+#jianbaos{
+	width: 720px;
+	height: 840px;
+	margin: 0px;
+	position: relative;
+	background-color: #e5eecc;
+}
+/*  #jianbao1,#jianbao3,#jianbao5{
+	width: 410px;
+	height: 250px;
+	margin: 15px;
+	float: left;
+}
+#jianbao2,#jianbao4,#jianbao6{
+	width: 410px;
+	height: 250px;
+	margin: 15px;
+	margin-left: 20px;
+	float: left;
+}
+#finalJianbao1,#finalJianbao2,#finalJianbao3{
+	position: absolute;
+	margin: 15px;
+	left: 310px;
+	top: 0;
+
+} */
+#chart1{
+	width: 700px;
+	height: 855px;
+	display: block;
+	margin: 0 auto;
+}
+#chart2{
+	width: 700px;
+	height: 855px;
+	display: block;
+	margin: 0 auto;
+}
+#chart3{
+	width: 700px;
+	height: 855px;
+	display: block;
+	margin: 0 auto;
+}
+
+/* 第一组 */
+#jianbao6{
+	position: absolute;
+		width: 700px;
+	height: 450px;
+	top: 90px;
+	left:10px;
+}
+#jianbao4{
+	position: absolute;
+	top: 373px;
+	right: 130px;
+	width: 226px;
+	height: 159px;
+}
+#jianbao3{
+	position: absolute;
+	top: 611px;
+	left: 10px;
+	width: 345px;
+	height: 245px;
+}
+#jianbao1{
+	position: absolute;
+	top: 611px;
+	left: 345px;
+	width: 355px;
+	height: 245px;
+}
+#jianbao5{
+display: none;
+}
+#jianbao2{
+display: none;
+}
+/* 第二组 */
+#jianbao12{
+	position: absolute;
+	top: 0px;
+	left: 10px;
+	width: 407px;
+	height: 328px;
+}
+#jianbao7{
+	position: absolute;
+	top: 0px;
+	left: 417px;
+	width: 293px;
+	height: 328px;
+}
+#jianbao8{
+	position: absolute;
+	top: 335px;
+	left: 10px;
+	width: 341px;
+	height: 259px;
+}
+#jianbao9{
+	position: absolute;
+	top: 335px;
+	left: 358px;
+	width: 352px;
+	height: 259px;
+}
+#jianbao10{
+	position: absolute;
+	top: 600px;
+	left: 10px;
+	width: 343px;
+	height: 256px;
+}
+#jianbao11{
+	position: absolute;
+	top: 600px;
+	left: 358px;
+	width: 352px;
+	height: 256px;
+}
+
+/* 第三组 */
+#jianbao13{
+	position: absolute;
+	top: 0px;
+	left: 10px;
+	width: 380px;
+	height: 263px;
+}
+#jianbao16{
+	position: absolute;
+	top: 0px;
+	right: 10px;
+	width: 320px;
+	height: 263px;
+}
+#jianbao14{
+	position: absolute;
+	top: 266px;
+	left: 10px;
+	width: 310px;
+	height: 306px;
+}
+#jianbao18{
+	position: absolute;
+	top: 266px;
+	right: 10px;
+	width: 388px;
+	height: 306px;
+}
+#jianbao15{
+	position: absolute;
+	top: 576px;
+	left: 10px;
+	width: 401px;
+	height: 279px;
+}
+#jianbao17{
+	position: absolute;
+	top: 576px;
+	right: 10px;
+	width: 299px;
+	height: 279px;
+}
+.clear{
+	clear: both;
+}
+
+
+#mobanPic1,#mobanPic2,#mobanPic3{
+	position: absolute;
+	top: 770px;
+	left: 40px;
+}

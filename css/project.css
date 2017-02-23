@@ -1,0 +1,56 @@
+.container button{
+	float: right;
+	margin: 30px 0;
+}
+
+.row{
+	background-color: #f6f4f0;
+}
+.main .row .left-column{
+	width: 200px;
+	background-color: #e5eecc;
+	margin: 10px;
+	float: left;
+}
+.main .row .right-column{
+	width: 900px;
+	background-color: #e5eecc;
+	margin: 10px;
+	float: right;
+}
+.main .row .right-column #container1,#container3{
+	width: 425px;
+	height: 250px;
+	margin: 10px;
+	float: left;
+}
+.main .row .right-column #container2,#container4{
+	width: 425px;
+	height: 250px;
+	margin: 10px;
+	float: right;
+}
+
+.main .row .right-column #pic1,#pic3{
+	width: 425px;
+	height: 250px;
+	margin: 10px;
+	float: left;
+}
+.main .row .right-column #pic2,#pic4{
+	width: 425px;
+	height: 250px;
+	margin: 10px;
+	float: right;
+}
+
+.main .row #dongtu,#jianbao,.bigdata{
+	width: 700px;
+	margin: 10px;
+}
+
+.main .row #hecheng{
+	margin: 20px;
+}
+
+

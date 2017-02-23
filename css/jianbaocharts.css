@@ -1,0 +1,191 @@
+#container{
+	width: 1190px;
+
+	margin: 0 auto;
+}
+#content{
+	height: 900px;
+	margin-top: 20px;
+
+	background-color: #f9d672;
+	position: relative;
+}
+
+#content-left{
+	width: 200px;
+	margin: 10px;
+	float: left;
+	background-color: #e5eecc;
+}
+#xiaomoban1,#xiaomoban2,#xiaomoban3{
+	width: 180px;
+	display: block;
+	margin:10px;
+	border: 1px solid #272822;
+}
+
+#content-main{
+	width: 950px;
+	margin: 10px;
+	float: left;
+	background-color: #e5eecc;
+}
+
+ #jianbao1,#jianbao3,#jianbao5{
+	width: 440px;
+	height: 250px;
+	margin: 15px;
+	float: left;
+}
+ #jianbao2,#jianbao4,#jianbao6{
+	width: 440px;
+	height: 250px;
+	margin: 15px;
+	margin-left: 20px;
+	float: left;
+}
+
+#finalJianbao1,#finalJianbao2,#finalJianbao3{
+	position: absolute;
+	margin: 15px;
+	left: 330px;
+	top: 0;
+	display: none;
+}
+
+#chart1{
+	width: 700px;
+	height: 855px;
+}
+#chart2{
+	width: 700px;
+	height: 855px;
+}
+#chart3{
+	width: 700px;
+	height: 855px;
+}
+/* 第一组 */
+#chatu1{
+	position: absolute;
+	top: 90px;
+	width: 700px;
+	height: 450px;
+	margin: 0 auto;
+}
+#chatu2{
+	position: absolute;
+	top: 373px;
+	right: 130px;
+	width: 226px;
+	height: 159px;
+}
+#chatu3{
+	position: absolute;
+	top: 611px;
+	left: 0px;
+	width: 363px;
+	height: 245px;
+}
+#chatu4{
+	position: absolute;
+	top: 611px;
+	left: 363px;
+	width: 333px;
+	height: 245px;
+}
+/* 第二组 */
+#chatu7{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 420px;
+	height: 328px;
+}
+#chatu8{
+	position: absolute;
+	top: 0px;
+	left: 420px;
+	width: 280px;
+	height: 328px;
+}
+#chatu9{
+	position: absolute;
+	top: 335px;
+	left: 0px;
+	width: 343px;
+	height: 258px;
+}
+#chatu10{
+	position: absolute;
+	top: 335px;
+	left: 348px;
+	width: 354px;
+	height: 258px;
+}
+#chatu11{
+	position: absolute;
+	top: 600px;
+	left: 0px;
+	width: 342px;
+	height: 257px;
+}
+#chatu12{
+	position: absolute;
+	top: 600px;
+	left: 347px;
+	width: 354px;
+	height: 257px;
+}
+/* 第三组 */
+#chatu13{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 435px;
+	height: 264px;
+}
+#chatu14{
+	position: absolute;
+	top: 0px;
+	left: 435px;
+	width: 265px;
+	height: 264px;
+}
+#chatu15{
+	position: absolute;
+	top: 268px;
+	left: 0px;
+	width: 344px;
+	height: 305px;
+}
+#chatu16{
+	position: absolute;
+	top: 268px;
+	left: 344px;
+	width: 356px;
+	height: 305px;
+}
+#chatu17{
+	position: absolute;
+	top: 576px;
+	left: 0px;
+	width: 344px;
+	height: 281px;
+}
+#chatu18{
+	position: absolute;
+	top: 576px;
+	left: 344px;
+	width: 356px;
+	height: 281px;
+}
+.clear{
+	clear: both;
+}
+
+#mobanPic1,#mobanPic2,#mobanPic3{
+	position: absolute;
+	top: 770px;
+	left: 40px;
+}
